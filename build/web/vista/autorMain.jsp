@@ -41,7 +41,7 @@
                   </div>
                   <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/biblioteca-2017/EditorialServlet" method="post">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/biblioteca-2017/controladorAutor" method="post">
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nombre">Nombre <span class="required">*</span>
@@ -57,8 +57,8 @@
                           <input type="text" name="descripcion" id="descripcion" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
-                          
-                      
+                            
+                        <input type="hidden" name="metodo" value="insertar">
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -101,7 +101,7 @@
                             <td><c:out value="${u.autor_nombre}"/></td>
                             <td><c:out value="${u.autor_descripcion}"/></td>
                             <td><a type="button" class="btn btn-info">Modificar</a>
-                                <a href="/biblioteca-2017/controladorUsuario?metodo=eliminar&id=${u.autor_id}" type="button" class="btn btn-danger">Eliminar</a></td>
+                                <a href="/biblioteca-2017/controladorAutor?metodo=eliminar&id=${u.autor_id}" type="button" class="btn btn-danger">Eliminar</a></td>
                         </tr>
                         </c:forEach>
                       </tbody>

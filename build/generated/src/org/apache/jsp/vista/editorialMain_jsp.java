@@ -65,16 +65,18 @@ public final class editorialMain_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       sv.edu.sv.bean.editorialBean editorial_b = null;
-      synchronized (session) {
-        editorial_b = (sv.edu.sv.bean.editorialBean) _jspx_page_context.getAttribute("editorial_b", PageContext.SESSION_SCOPE);
+      synchronized (request) {
+        editorial_b = (sv.edu.sv.bean.editorialBean) _jspx_page_context.getAttribute("editorial_b", PageContext.REQUEST_SCOPE);
         if (editorial_b == null){
           editorial_b = new sv.edu.sv.bean.editorialBean();
-          _jspx_page_context.setAttribute("editorial_b", editorial_b, PageContext.SESSION_SCOPE);
+          _jspx_page_context.setAttribute("editorial_b", editorial_b, PageContext.REQUEST_SCOPE);
         }
       }
       out.write('\n');
       org.apache.jasper.runtime.JspRuntimeLibrary.introspect(_jspx_page_context.findAttribute("editorial_b"), request);
+      out.write("\n");
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
@@ -134,7 +136,7 @@ public final class editorialMain_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("                      <div class=\"ln_solid\"></div>\n");
       out.write("                      <div class=\"form-group\">\n");
       out.write("                        <div class=\"col-md-6 col-sm-6 col-xs-12 col-md-offset-3\">\n");
-      out.write("                          <button type=\"submit\" class=\"btn btn-success\">Guardar</button>\n");
+      out.write("                          <input type=\"submit\" value=\"Guardar\" class=\"btn btn-success\"/>\n");
       out.write("                        </div>\n");
       out.write("                      </div>\n");
       out.write("\n");

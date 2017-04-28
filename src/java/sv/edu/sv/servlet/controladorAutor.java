@@ -15,15 +15,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import sv.edu.udb.editorial;
-import sv.edu.sv.bean.editorialBean;
+import sv.edu.sv.bean.autorBean;
+import sv.edu.udb.autor;
+
 /**
  *
  * @author Jose
  */
-@WebServlet(name = "controladorEditorial", urlPatterns = {"/controladorEditorial"})
-public class controladorEditorial extends HttpServlet {
+@WebServlet(name = "controladorAutor", urlPatterns = {"/controladorAutor"})
+public class controladorAutor extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,49 +38,47 @@ public class controladorEditorial extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            editorialBean editorial_b = new editorialBean();
-            editorial editorial = new editorial();
+            autorBean autor_b = new autorBean();
+            autor autors = new autor();
             boolean resultado=false;
-            /*editorial.setDescripcion(request.getParameter("descripcion"));
-            editorial.setNombre(request.getParameter("descripcion"));
+            /*autor.setDescripcion(request.getParameter("descripcion"));
+            autor.setNombre(request.getParameter("descripcion"));
             */
             String metodo = request.getParameter("metodo");
             
             if(metodo.equals("insertar")){
-            editorial_b.setNombre(request.getParameter("nombre"));
-            editorial_b.setDescripcion(request.getParameter("descripcion"));
-            resultado=editorial.nuevaEditorial(editorial_b);
+            autor_b.setNombre(request.getParameter("nombre"));
+            autor_b.setDescripcion(request.getParameter("descripcion"));
+            resultado=autors.nuevaAutor(autor_b);
                 if(resultado){
-                response.sendRedirect("vista/editorialMain.jsp?exito=1&mensaje=Insertado Correctamente");
+                response.sendRedirect("vista/autorMain.jsp?exito=1&mensaje=Insertado Correctamente");
                 }else{
-                response.sendRedirect("vista/editorialMain.jsp?exito=0&mensaje=Error al Insertar");
+                response.sendRedirect("vista/autorMain.jsp?exito=0&mensaje=Error al Insertar");
                 } 
             }
             
             if(metodo.equals("modificar")){
-                editorial_b.setId(Integer.parseInt(request.getParameter("id")));
-                editorial_b.setNombre(request.getParameter("nombre"));
-                editorial_b.setDescripcion(request.getParameter("descripcion"));
-                resultado=editorial.modificarEditorial(editorial_b);
+                autor_b.setId(Integer.parseInt(request.getParameter("id")));
+                autor_b.setNombre(request.getParameter("nombre"));
+                autor_b.setDescripcion(request.getParameter("descripcion"));
+                resultado=autors.modificarAutor(autor_b);
                     if(resultado){
-                    response.sendRedirect("vista/editorialMain.jsp?exito=1&mensaje=Modificado Correctamente");
+                    response.sendRedirect("vista/autorMain.jsp?exito=1&mensaje=Modificado Correctamente");
                     }else{
-                    response.sendRedirect("vista/editorialMain.jsp?exito=0&mensaje=Erorr al Modificar Registro");
+                    response.sendRedirect("vista/autorMain.jsp?exito=0&mensaje=Erorr al Modificar Registro");
                     } 
             }
             
             if(metodo.equals("eliminar")){
                 int id=Integer.parseInt(request.getParameter("id"));
-                resultado=editorial.eliminarEditorial(id);
+                resultado=autors.eliminarAutor(id);
                     if(resultado){
-                    response.sendRedirect("vista/editorialMain.jsp?exito=1&mensaje=Eliminado Correctamente");
+                    response.sendRedirect("vista/autorMain.jsp?exito=1&mensaje=Eliminado Correctamente");
                     }else{
-                    response.sendRedirect("vista/editorialMain.jsp?exito=0&mensaje=Error al Eliminar");
+                    response.sendRedirect("vista/autorMain.jsp?exito=0&mensaje=Error al Eliminar");
                     } 
             
             }
-            
-          
         }
     }
 
@@ -99,7 +97,7 @@ public class controladorEditorial extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(controladorEditorial.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(controladorAutor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -117,7 +115,7 @@ public class controladorEditorial extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(controladorEditorial.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(controladorAutor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

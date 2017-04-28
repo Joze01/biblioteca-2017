@@ -9,8 +9,10 @@
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@page session="true" language="java" import="java.util.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean class="sv.edu.sv.bean.editorialBean" scope="session" id="editorial_b" />
+
+<jsp:useBean class="sv.edu.sv.bean.editorialBean" scope="request" id="editorial_b" />
 <jsp:setProperty name="editorial_b" property="*"/>
+
 <!DOCTYPE html>
 <html>
     <%-- header --%>
@@ -62,7 +64,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button type="submit" class="btn btn-success">Guardar</button>
+                          <input type="submit" value="Guardar" class="btn btn-success"/>
                         </div>
                       </div>
 

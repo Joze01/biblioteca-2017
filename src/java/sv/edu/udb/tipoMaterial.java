@@ -38,9 +38,9 @@ public class tipoMaterial {
           return resultado;
         }
         
-        public boolean eliminarTipoMaterial(tipoMaterialBean tipoMaterial) throws SQLException{
+        public boolean eliminarTipoMaterial(int id) throws SQLException{
           resultado=false;
-          sql="DELETE FROM tipomaterial WHERE TipoMaterial_id"+tipoMaterial.getId();
+          sql="DELETE FROM tipomaterial WHERE TipoMaterial_id="+id;
           con = new Conexion();
           resultado=con.setQuery(sql);
           con.cerrarConexion();

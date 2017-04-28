@@ -20,11 +20,11 @@ public class autor {
         boolean resultado=false;
     public boolean nuevaAutor(autorBean autor) throws SQLException{
         resultado=false;
-        sql="";
+        sql="INSERT INTO autor(autor_nombre, autor_descripcion) VALUES ('"+autor.getNombre()+"','"+autor.getDescripcion()+"')";
         con=new Conexion();
         resultado=con.setQuery(sql);
         con.cerrarConexion();
-    return resultado;
+        return resultado;
     }
     
     public boolean modificarAutor(autorBean autor) throws SQLException{
@@ -43,4 +43,6 @@ public class autor {
         resultado= con.setQuery(sql);
         return resultado;
     }
+
+
 }

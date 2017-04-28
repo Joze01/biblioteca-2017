@@ -15,15 +15,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import sv.edu.udb.editorial;
-import sv.edu.sv.bean.editorialBean;
+import sv.edu.sv.bean.tipoMaterialBean;
+import sv.edu.udb.tipoMaterial;
+
 /**
  *
  * @author Jose
  */
-@WebServlet(name = "controladorEditorial", urlPatterns = {"/controladorEditorial"})
-public class controladorEditorial extends HttpServlet {
+@WebServlet(name = "controladorTipoMateriales", urlPatterns = {"/controladorTipoMateriales"})
+public class controladorTipoMateriales extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,49 +38,49 @@ public class controladorEditorial extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            editorialBean editorial_b = new editorialBean();
-            editorial editorial = new editorial();
+             tipoMaterialBean tipoMaterial_b = new tipoMaterialBean();
+            tipoMaterial tipoMaterial = new tipoMaterial();
             boolean resultado=false;
-            /*editorial.setDescripcion(request.getParameter("descripcion"));
-            editorial.setNombre(request.getParameter("descripcion"));
+            /*tipoMaterial.setDescripcion(request.getParameter("descripcion"));
+            tipoMaterial.setNombre(request.getParameter("descripcion"));
             */
             String metodo = request.getParameter("metodo");
             
             if(metodo.equals("insertar")){
-            editorial_b.setNombre(request.getParameter("nombre"));
-            editorial_b.setDescripcion(request.getParameter("descripcion"));
-            resultado=editorial.nuevaEditorial(editorial_b);
+            tipoMaterial_b.setNombre(request.getParameter("nombre"));
+            tipoMaterial_b.setDescripcion(request.getParameter("descripcion"));
+            resultado=tipoMaterial.nuevoTipoMaterial(tipoMaterial_b);
                 if(resultado){
-                response.sendRedirect("vista/editorialMain.jsp?exito=1&mensaje=Insertado Correctamente");
+                response.sendRedirect("vista/tipoMaterialMain.jsp?exito=1&mensaje=Insertado Correctamente");
                 }else{
-                response.sendRedirect("vista/editorialMain.jsp?exito=0&mensaje=Error al Insertar");
+                response.sendRedirect("vista/tipoMaterialMain.jsp?exito=0&mensaje=Error al Insertar");
                 } 
             }
             
             if(metodo.equals("modificar")){
-                editorial_b.setId(Integer.parseInt(request.getParameter("id")));
-                editorial_b.setNombre(request.getParameter("nombre"));
-                editorial_b.setDescripcion(request.getParameter("descripcion"));
-                resultado=editorial.modificarEditorial(editorial_b);
+                tipoMaterial_b.setId(Integer.parseInt(request.getParameter("id")));
+                tipoMaterial_b.setNombre(request.getParameter("nombre"));
+                tipoMaterial_b.setDescripcion(request.getParameter("descripcion"));
+                resultado=tipoMaterial.modificarrTipoMaterial(tipoMaterial_b);
                     if(resultado){
-                    response.sendRedirect("vista/editorialMain.jsp?exito=1&mensaje=Modificado Correctamente");
+                    response.sendRedirect("vista/tipoMaterialMain.jsp?exito=1&mensaje=Modificado Correctamente");
                     }else{
-                    response.sendRedirect("vista/editorialMain.jsp?exito=0&mensaje=Erorr al Modificar Registro");
+                    response.sendRedirect("vista/tipoMaterialMain.jsp?exito=0&mensaje=Erorr al Modificar Registro");
                     } 
             }
             
             if(metodo.equals("eliminar")){
                 int id=Integer.parseInt(request.getParameter("id"));
-                resultado=editorial.eliminarEditorial(id);
+                resultado=tipoMaterial.eliminarTipoMaterial(id);
                     if(resultado){
-                    response.sendRedirect("vista/editorialMain.jsp?exito=1&mensaje=Eliminado Correctamente");
+                    response.sendRedirect("vista/tipoMaterialMain.jsp?exito=1&mensaje=Eliminado Correctamente");
                     }else{
-                    response.sendRedirect("vista/editorialMain.jsp?exito=0&mensaje=Error al Eliminar");
+                    response.sendRedirect("vista/tipoMaterialMain.jsp?exito=0&mensaje=Error al Eliminar");
                     } 
             
             }
             
-          
+            
         }
     }
 
@@ -99,7 +99,7 @@ public class controladorEditorial extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(controladorEditorial.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(controladorTipoMateriales.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -117,7 +117,7 @@ public class controladorEditorial extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(controladorEditorial.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(controladorTipoMateriales.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
