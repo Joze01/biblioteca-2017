@@ -7,21 +7,20 @@ package sv.edu.sv.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import sv.edu.udb.Conexion;
+import javax.servlet.http.HttpSession;
+import sv.edu.udb.editorial;
+import sv.edu.sv.bean.editorialBean;
 /**
  *
  * @author Jose
  */
-@WebServlet(name = "EditorialServletDelete", urlPatterns = {"/EditorialServletDelete"})
-public class EditorialServletDelete extends HttpServlet {
+@WebServlet(name = "controladorEditorial", urlPatterns = {"/controladorEditorial"})
+public class controladorEditorial extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,17 +32,23 @@ public class EditorialServletDelete extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+             HttpSession session = request.getSession(true);
             /* TODO output your page here. You may use following sample code. */
-          String id= request.getParameter("id");
-                  String sql="delete from editorial where editorial_id="+id;
-                  out.println("<h1> id: "+id+"</h1>");
-                  Conexion con  = new Conexion();
-                  con.setQuery(sql);
-        
-           response.sendRedirect("/biblioteca-2017/vista/editorialMain.jsp");
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            editorialBean Ed;
+            Ed = (editorialBean)session.getAttribute("editorial_b");
+            out.println("<head>");
+            out.println("<title>Servlet controladorEditorial</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>"+Ed.getNombre()+"</h1>");
+            out.println("<h1>Servlet controladorEditorial at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 
@@ -59,11 +64,7 @@ public class EditorialServletDelete extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(EditorialServletDelete.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**
@@ -77,11 +78,7 @@ public class EditorialServletDelete extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(EditorialServletDelete.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**

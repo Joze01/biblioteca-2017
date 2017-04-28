@@ -100,7 +100,8 @@
                             <td><c:out value="${u.autor_id}"/></td>
                             <td><c:out value="${u.autor_nombre}"/></td>
                             <td><c:out value="${u.autor_descripcion}"/></td>
-                            <td><a type="button" class="btn btn-info">Modificar</a><a href="/biblioteca-2017/controladorUsuario?metodo=eliminar&id=${u.autor_id}" type="button" class="btn btn-danger">Eliminar</a></td>
+                            <td><a type="button" class="btn btn-info">Modificar</a>
+                                <a href="/biblioteca-2017/controladorUsuario?metodo=eliminar&id=${u.autor_id}" type="button" class="btn btn-danger">Eliminar</a></td>
                         </tr>
                         </c:forEach>
                       </tbody>
