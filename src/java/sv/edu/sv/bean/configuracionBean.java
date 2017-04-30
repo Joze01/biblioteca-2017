@@ -52,7 +52,41 @@ public class configuracionBean {
     public void setMora(double mora) {
         this.mora = mora;
     }
+    private int id;
     private int docente;
     private int alumno;
     private double mora; 
+    private boolean estado;
+
+    /**
+     * @return the estado
+     */
+    public boolean isEstado() {
+        return estado;
+    }
+
+    /**
+     * @param estado the estado to set
+     */
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+    
+    public boolean getEstado(){
+        return estado;
+    }
+
+    /**
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
 }

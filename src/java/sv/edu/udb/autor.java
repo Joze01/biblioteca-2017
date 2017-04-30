@@ -14,7 +14,7 @@ import sv.edu.sv.bean.autorBean;
  * @author Jose
  */
 public class autor {
-           Conexion con;
+        Conexion con;
         String sql;
         ResultSet rs;
         boolean resultado=false;
