@@ -206,8 +206,9 @@
                                     </c:forEach>
                         </tbody>
                       </table>
+                                    
                         
-                                    <input type="submit"/>
+                                    <input class="btn btn-success" type="submit"/>
                         
                       </div>
 
