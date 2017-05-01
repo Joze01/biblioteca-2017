@@ -4,11 +4,7 @@
     Created on : 19-abr-2017, 1:17:23
     Author     : Jose
 --%>
-<<<<<<< Updated upstream
---%>
-=======
 
->>>>>>> Stashed changes
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -47,26 +43,24 @@
                   </div>
                   <div class="x_content">
                     <br />
-<<<<<<< Updated upstream
                         <form class="form-horizontal form-label-left " method="get" action="hola" >
       <div id="wizard" class="form_wizard wizard_horizontal">
        
 
-=======
                      <div id="wizard" class="form_wizard wizard_horizontal">
->>>>>>> Stashed changes
+
                       <ul class="wizard_steps">
                         <li>
                           <a href="#step-1">
                             <span class="step_no">1</span>
                             <span class="step_descr">
-<<<<<<< Updated upstream
+
                                               Paso 1<br />
                                               <small>Datos Generales</small>
-=======
+
                                               Step 1<br />
                                               <small>Step 1 description</small>
->>>>>>> Stashed changes
+
                                           </span>
                           </a>
                         </li>
@@ -74,9 +68,9 @@
                           <a href="#step-2">
                             <span class="step_no">2</span>
                             <span class="step_descr">
-<<<<<<< Updated upstream
+
                                               Paso 2<br />
-=======
+
                                               Step 2<br />
                                               <small>Step 2 description</small>
                                           </span>
@@ -96,14 +90,14 @@
                             <span class="step_no">4</span>
                             <span class="step_descr">
                                               Step 4<br />
->>>>>>> Stashed changes
+
                                               <small>Step 4 description</small>
                                           </span>
                           </a>
                         </li>
                       </ul>
                       <div id="step-1">
-<<<<<<< Updated upstream
+
                          
                           <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="isbn">ISBN<span class="required">*</span>
@@ -219,7 +213,7 @@
                       </form>
                     
                     
->>>>>>> Stashed changes
+
                   </div>
                 </div>
                 
