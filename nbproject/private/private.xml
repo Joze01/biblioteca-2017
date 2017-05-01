@@ -4,27 +4,41 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/configuracionMain.jsp</file>
-            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/META-INF/context.xml</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/udb/tipoMaterial.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/publicBusqueda.jsp</file>
-            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/login.jsp</file>
-            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/editorialBean.java</file>
-            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/autorBean.java</file>
-            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/assent/header.jsp</file>
-            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/categoriaBean.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/servlet/controladorEditorial.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/udb/funciones.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/udb/Conexion.java</file>
-            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/assent/menuAdmin.jsp</file>
-            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/usuarioBean.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/servlet/controladorTipoMateriales.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/configuracionBean.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/servlet/EditorialServlet.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/udb/usuario.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/assent/menuUsuario.jsp</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/autorMain.jsp</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/materialMain.jsp</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/prestamoBean.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/assent/footer.jsp</file>
-            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/documentoBean.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/usuarioMain.jsp</file>
-            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/publicPrestamos.jsp</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/servlet/controladorUsuario.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/udb/editorial.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/tipoMaterialMain.jsp</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/nbproject/build-impl.xml</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/editorialMain.jsp</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/META-INF/context.xml</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/servlet/controladorAutor.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/login.jsp</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/editorialBean.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/autorBean.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/assent/header.jsp</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/categoriaBean.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/assent/menuAdmin.jsp</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/usuarioBean.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/udb/autor.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/udb/material.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/servlet/autenticarServlet.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/documentoBean.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/tipoMaterialBean.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/publicPrestamos.jsp</file>
         </group>
     </open-files>
 </project-private>

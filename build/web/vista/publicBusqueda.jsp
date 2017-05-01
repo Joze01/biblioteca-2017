@@ -11,7 +11,7 @@
     <%-- header --%>
     <head>
         <jsp:include page="assent/header.jsp"/>
-        <title>MANTENIMINETO MATERIAL</title>
+        <title>BUSCADOR</title>
     </head>
     <%-- /header --%>
     <body class="nav-md">
