@@ -7,6 +7,9 @@ package sv.edu.sv.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +35,7 @@ public class controladorConfiguracion extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -43,19 +46,43 @@ public class controladorConfiguracion extends HttpServlet {
             
             
             if(metodo.equals("insertar")){
+               /*out.println(request.getParameter("alumno")+"    "+request.getParameter("docente")+"     "+request.getParameter("mora")+"  "+request.getParameter("estado"));
+               */
                config.setAlumno(Integer.parseInt(request.getParameter("alumno")));
                config.setDocente(Integer.parseInt(request.getParameter("docente")));
                config.setMora(Double.parseDouble(request.getParameter("mora")));
                config.setEstado(Boolean.parseBoolean(request.getParameter("estado")));
-               
+               resultado=confiS.nuevaConfiguracion(config);
+               if(resultado){
+                response.sendRedirect("vista/configuracionMain.jsp?exito=1&mensaje=Insertado Correctamente");
+                }else{
+                response.sendRedirect("vista/configuracionMain.jsp?exito=0&mensaje=Error al Insertar");
+                }
             }
             
             if(metodo.equals("modificar")){
-               
+               config.setId(0);
+                config.setAlumno(Integer.parseInt(request.getParameter("alumno")));
+               config.setDocente(Integer.parseInt(request.getParameter("docente")));
+               config.setMora(Double.parseDouble(request.getParameter("mora")));
+               config.setEstado(Boolean.parseBoolean(request.getParameter("estado")));
+               resultado=confiS.nuevaConfiguracion(config);
+               if(resultado){
+                response.sendRedirect("vista/configuracionMain.jsp?exito=1&mensaje=Insertado Correctamente");
+                }else{
+                response.sendRedirect("vista/configuracionMain.jsp?exito=0&mensaje=Error al Insertar");
+                }
             }
             
             if(metodo.equals("eliminar")){
-               
+               int id = Integer.parseInt(request.getParameter("id"));
+               resultado=confiS.eliminarConfiguracion(id);
+               if(resultado){
+                response.sendRedirect("vista/configuracionMain.jsp?exito=1&mensaje=Eliminado correctamente");
+                }else{
+                response.sendRedirect("vista/configuracionMain.jsp?exito=0&mensaje=Error al eliminar");
+                }
+              
             }
             
             
@@ -75,7 +102,11 @@ public class controladorConfiguracion extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(controladorConfiguracion.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -89,7 +120,11 @@ public class controladorConfiguracion extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(controladorConfiguracion.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

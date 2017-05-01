@@ -11,7 +11,7 @@
     <%-- header --%>
     <head>
         <jsp:include page="assent/header.jsp"/>
-        <title>PRESTAMOS</title>
+        <title>MIS PRESTAMOS</title>
     </head>
     <%-- /header --%>
     <body class="nav-md">

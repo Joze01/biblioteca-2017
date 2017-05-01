@@ -21,6 +21,7 @@
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/usuarioMain.jsp</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/servlet/controladorUsuario.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/udb/editorial.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/udb/configuracion.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/tipoMaterialMain.jsp</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/editorialMain.jsp</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/META-INF/context.xml</file>
@@ -28,6 +29,7 @@
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/login.jsp</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/editorialBean.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/autorBean.java</file>
+            <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/servlet/controladorConfiguracion.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/assent/header.jsp</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/src/java/sv/edu/sv/bean/categoriaBean.java</file>
             <file>file:/Users/Jose/Desktop/david/biblioteca-2017/web/vista/assent/menuAdmin.jsp</file>

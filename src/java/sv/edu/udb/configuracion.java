@@ -18,7 +18,7 @@ public class configuracion {
         String sql;
         ResultSet rs;
         boolean resultado=false;
-    public boolean nuevaAutor(configuracionBean config) throws SQLException{
+    public boolean nuevaConfiguracion(configuracionBean config) throws SQLException{
         resultado=false;
         if(config.isEstado()){
         con=new Conexion();
@@ -29,7 +29,7 @@ public class configuracion {
         con.cerrarConexion();
         }else{
         con=new Conexion();
-        sql="INSERT INTO configuracion(configuracion_alumno, configuracion_docente, configuracion_mora, estado) VALUES ("+config.getAlumno()+","+config.getDocente()+","+config.getMora()+",1)";
+        sql="INSERT INTO configuracion(configuracion_alumno, configuracion_docente, configuracion_mora, estado) VALUES ("+config.getAlumno()+","+config.getDocente()+","+config.getMora()+",0)";
         resultado=con.setQuery(sql);
         con.cerrarConexion();
         }
@@ -38,7 +38,7 @@ public class configuracion {
         return resultado;
     }
     
-    public boolean modificarAutor(configuracionBean config) throws SQLException{
+    public boolean modificarConfiguracion(configuracionBean config) throws SQLException{
         resultado=false;
         int valorestado=0;
         if(config.isEstado()){
@@ -52,7 +52,7 @@ public class configuracion {
         return resultado;
     }
     
-    public boolean eliminarAutor(int id) throws SQLException{
+    public boolean eliminarConfiguracion(int id) throws SQLException{
        resultado=false;
         sql="DELETE FROM configuracion WHERE configuracion_id="+id;
         con=new Conexion();
