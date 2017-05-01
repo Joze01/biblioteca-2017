@@ -18,6 +18,9 @@
     <!-- Custom Theme Scripts -->
     <script src="../respaldo/js/custom.js"></script>
     
+     <!-- jQuery Smart Wizard -->
+    <script src="../vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+   
         <!-- PNotify -->
     <script src="../vendors/pnotify/dist/pnotify.js"></script>
     <script src="../vendors/pnotify/dist/pnotify.buttons.js"></script>
