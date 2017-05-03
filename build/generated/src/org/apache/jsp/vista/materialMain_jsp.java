@@ -239,8 +239,9 @@ public final class materialMain_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("\n");
       out.write("                        </tbody>\n");
       out.write("                      </table>\n");
+      out.write("                                    \n");
       out.write("                        \n");
-      out.write("                                    <input type=\"submit\"/>\n");
+      out.write("                                    <input class=\"btn btn-success\" type=\"submit\"/>\n");
       out.write("                        \n");
       out.write("                      </div>\n");
       out.write("\n");

@@ -62,7 +62,7 @@
                             <span class="step_no">2</span>
                             <span class="step_descr">
                                               Paso 2<br />
-                                              <small>Step 4 description</small>
+                                              <small>seleccionar autor</small>
                                           </span>
                           </a>
                         </li>
@@ -145,7 +145,7 @@
 
                       </div>
                       <div id="step-2">
-                        <h2 class="StepTitle">Step 2 Content</h2>
+                        <h2 class="StepTitle">Seleccionar Autor</h2>
                       <table id="datatable" class="table table-striped table-bordered">
                         <thead>
                           <tr>
